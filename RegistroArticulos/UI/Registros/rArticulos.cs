@@ -27,29 +27,63 @@ namespace RegistroArticulos.UI.Registros
             Articulos articulo = LlenaClase();
             bool paso = false;
 
-            //Verificar si es a guardar o modificar un articulo
-            if (ArticuloId_numericUpDown.Value == 0)
-            {
-                paso = BLL.ArticulosBLL.Guardar(articulo);
+            if(Validar())//si la funcion validar() = True entonces se procede a guarda o modificar
+            { 
+                //Verificar si es a guardar o modificar un articulo
+                if (ArticuloId_numericUpDown.Value == 0)
+                {
+                    paso = BLL.ArticulosBLL.Guardar(articulo);
+                }
+
+                else
+                {
+                    paso = BLL.ArticulosBLL.Modificar(articulo);
+                }
+
+
+                //Notifica Si ocurrio o no
+                if (paso)
+                    MessageBox.Show("Se Ha Guardado!!", "Congradulation!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    MessageBox.Show("Imposible Guardar??", "Oops!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-               
-            else
-            {
-                paso = BLL.ArticulosBLL.Modificar(articulo);
-            }
-                
-            
-            //Notifica Si ocurrio o no
-            if (paso)
-                MessageBox.Show("Se Ha Guardado!!", "Congradulation!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else
-                MessageBox.Show("Imposible Guardar??", "Oops!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
         }
-
-        private static void Validar()
+        //metodo en el cual validamos los campos para que sean obligatorios
+        private bool Validar()
         {
+            bool paso = true;
 
+            if(Descripcion_textBox.Text == string.Empty)
+            {
+                Validar_errorProvider.SetError(Descripcion_textBox, "Falto Introducir La Descripcion Del Articulo");
+                paso = false;
+            }
+            else
+                if(Precio_numericUpDown.Value == 0)
+            {
+                Validar_errorProvider.SetError(Precio_numericUpDown, "Falto Digital El Precio Del Articulo");
+                paso = false;
+            }
+            else
+                if(Existencia_numericUpDown.Value == 0)
+            {
+                Validar_errorProvider.SetError(Existencia_numericUpDown, "Al Menos Debe Exitir 1 Articulo");
+                paso = false;
+            }
+            else
+                if(CantCotizada_numericUpDown.Value == 0)
+            {
+                Validar_errorProvider.SetError(CantCotizada_numericUpDown, "Debe Ingresar La Cantidad Cotizada Del Articulo");
+                paso = false;
+            }
+            else
+                if(CantCotizada_numericUpDown.Value > Existencia_numericUpDown.Value)
+            {
+                Validar_errorProvider.SetError(CantCotizada_numericUpDown, "La Cantidad Cotizada No Debe Superar La Existencia Del Articulo");
+                paso = false;
+            }
+            return paso;
         }
 
         private Articulos LlenaClase()

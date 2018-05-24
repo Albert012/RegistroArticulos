@@ -50,6 +50,7 @@
             this.Existencia_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.CantCotizada_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Validar_errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ArticuloId_numericUpDown)).BeginInit();
@@ -57,6 +58,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Existencia_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantCotizada_numericUpDown)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Validar_errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -250,6 +252,10 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Acciones";
             // 
+            // Validar_errorProvider
+            // 
+            this.Validar_errorProvider.ContainerControl = this;
+            // 
             // rArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,6 +291,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Existencia_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantCotizada_numericUpDown)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Validar_errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,5 +320,6 @@
         private System.Windows.Forms.Button Eliminar_button;
         private System.Windows.Forms.Button Nuevo_button;
         private System.Windows.Forms.Button Guardar_button;
+        private System.Windows.Forms.ErrorProvider Validar_errorProvider;
     }
 }
