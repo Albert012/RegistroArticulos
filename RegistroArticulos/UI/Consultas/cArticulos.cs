@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace RegistroArticulos
+namespace RegistroArticulos.UI.Consultas
 {
-    public partial class Form1 : Form
+    public partial class cArticulos : Form
     {
-        public Form1()
+        public cArticulos()
         {
             InitializeComponent();
         }
