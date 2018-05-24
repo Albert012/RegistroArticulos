@@ -155,6 +155,11 @@
             // ArticuloId_numericUpDown
             // 
             this.ArticuloId_numericUpDown.Location = new System.Drawing.Point(156, 83);
+            this.ArticuloId_numericUpDown.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.ArticuloId_numericUpDown.Name = "ArticuloId_numericUpDown";
             this.ArticuloId_numericUpDown.Size = new System.Drawing.Size(104, 20);
             this.ArticuloId_numericUpDown.TabIndex = 0;
@@ -221,6 +226,11 @@
             // Precio_numericUpDown
             // 
             this.Precio_numericUpDown.Location = new System.Drawing.Point(108, 185);
+            this.Precio_numericUpDown.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.Precio_numericUpDown.Name = "Precio_numericUpDown";
             this.Precio_numericUpDown.Size = new System.Drawing.Size(104, 20);
             this.Precio_numericUpDown.TabIndex = 3;
@@ -228,6 +238,11 @@
             // Existencia_numericUpDown
             // 
             this.Existencia_numericUpDown.Location = new System.Drawing.Point(302, 185);
+            this.Existencia_numericUpDown.Maximum = new decimal(new int[] {
+            800,
+            0,
+            0,
+            0});
             this.Existencia_numericUpDown.Name = "Existencia_numericUpDown";
             this.Existencia_numericUpDown.Size = new System.Drawing.Size(99, 20);
             this.Existencia_numericUpDown.TabIndex = 4;
@@ -235,6 +250,11 @@
             // CantCotizada_numericUpDown
             // 
             this.CantCotizada_numericUpDown.Location = new System.Drawing.Point(156, 221);
+            this.CantCotizada_numericUpDown.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
             this.CantCotizada_numericUpDown.Name = "CantCotizada_numericUpDown";
             this.CantCotizada_numericUpDown.Size = new System.Drawing.Size(104, 20);
             this.CantCotizada_numericUpDown.TabIndex = 5;

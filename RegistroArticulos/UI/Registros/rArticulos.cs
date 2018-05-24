@@ -43,9 +43,15 @@ namespace RegistroArticulos.UI.Registros
 
                 //Notifica Si ocurrio o no
                 if (paso)
+                {
                     MessageBox.Show("Se Ha Guardado!!", "Congradulation!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                else
+                    Nuevo_button.PerformClick();
+                }
+
+                else                
                     MessageBox.Show("Imposible Guardar??", "Oops!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    
+                
             }
 
         }

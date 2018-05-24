@@ -34,7 +34,11 @@ namespace RegistroArticulos.UI.Consultas
                     break;
                 case 2://Descripcion
                     filtro = a => a.Descripcion.Contains(Criterio_textBox.Text);
-                    break;                
+                    break;
+                case 3://Fecha Vencimiento
+                    filtro = a => a.FechaVencimiento.Equals(Fecha_dateTimePicker.Value.Date);
+                    break;
+                   
             }
             Consulta_dataGridView.DataSource = BLL.ArticulosBLL.GetList(filtro);
         }
@@ -44,16 +48,35 @@ namespace RegistroArticulos.UI.Consultas
             if (Filtro_comboBox.SelectedIndex == 0)
             {
                 Criterio_textBox.Clear();
+                Criterio_textBox.Enabled = false;
+                Fecha_dateTimePicker.Visible = false;
                 Consultar_button.PerformClick();
             }
+            else
+                Criterio_textBox.Enabled = true;
+
+            if(Filtro_comboBox.SelectedIndex == 3)
+            {
+                Criterio_textBox.Visible = false;
+                Fecha_dateTimePicker.Visible = true;
+            }
+            else
+            {
+                Fecha_dateTimePicker.Visible = false;
+                Criterio_textBox.Visible = true;
+            }
+
+            
         }
+
 
         private void Criterio_textBox_TextChanged(object sender, EventArgs e)
         {
-            /*if(Filtro_comboBox.SelectedIndex == 0)
+            if(Criterio_textBox.Text != string.Empty)
             {
-                Criterio_textBox.Clear();
-            }*/
+                Consultar_button.PerformClick();
+                    
+            }
         }
     }
 }

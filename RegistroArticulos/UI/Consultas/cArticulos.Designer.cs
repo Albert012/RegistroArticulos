@@ -40,6 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Consulta_dataGridView = new System.Windows.Forms.DataGridView();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.Fecha_dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -79,6 +80,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.Fecha_dateTimePicker);
             this.groupBox2.Controls.Add(this.Consultar_button);
             this.groupBox2.Controls.Add(this.Criterio_textBox);
             this.groupBox2.Controls.Add(this.label3);
@@ -96,7 +98,7 @@
             // Consultar_button
             // 
             this.Consultar_button.Image = global::RegistroArticulos.Properties.Resources.find;
-            this.Consultar_button.Location = new System.Drawing.Point(545, 27);
+            this.Consultar_button.Location = new System.Drawing.Point(574, 27);
             this.Consultar_button.Name = "Consultar_button";
             this.Consultar_button.Size = new System.Drawing.Size(41, 37);
             this.Consultar_button.TabIndex = 2;
@@ -107,16 +109,17 @@
             // Criterio_textBox
             // 
             this.Criterio_textBox.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Criterio_textBox.Location = new System.Drawing.Point(270, 37);
+            this.Criterio_textBox.Location = new System.Drawing.Point(299, 36);
             this.Criterio_textBox.Name = "Criterio_textBox";
             this.Criterio_textBox.Size = new System.Drawing.Size(263, 22);
             this.Criterio_textBox.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.Criterio_textBox, "Introduzca Un Criterio De La Opcion Selecionada");
             this.Criterio_textBox.TextChanged += new System.EventHandler(this.Criterio_textBox_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(195, 37);
+            this.label3.Location = new System.Drawing.Point(224, 36);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 22);
             this.label3.TabIndex = 2;
@@ -128,20 +131,21 @@
             this.Filtro_comboBox.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Filtro_comboBox.FormattingEnabled = true;
             this.Filtro_comboBox.Items.AddRange(new object[] {
-            "",
-            "ArticuloId",
-            "Descripcion"});
-            this.Filtro_comboBox.Location = new System.Drawing.Point(68, 36);
+            "Todos",
+            "Articulo Id",
+            "Descripcion",
+            "Fecha Vencimiento"});
+            this.Filtro_comboBox.Location = new System.Drawing.Point(68, 35);
             this.Filtro_comboBox.Name = "Filtro_comboBox";
-            this.Filtro_comboBox.Size = new System.Drawing.Size(121, 23);
+            this.Filtro_comboBox.Size = new System.Drawing.Size(139, 23);
             this.Filtro_comboBox.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.Filtro_comboBox, "Si Selecciona La Opcion En Blanco Se Estraeran Todos Los Articulos");
+            this.toolTip1.SetToolTip(this.Filtro_comboBox, "Seleccione El Filtro Deseado Para Consultar");
             this.Filtro_comboBox.SelectedIndexChanged += new System.EventHandler(this.Filtro_comboBox_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 36);
+            this.label2.Location = new System.Drawing.Point(12, 35);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 22);
             this.label2.TabIndex = 0;
@@ -152,8 +156,21 @@
             this.Consulta_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Consulta_dataGridView.Location = new System.Drawing.Point(4, 144);
             this.Consulta_dataGridView.Name = "Consulta_dataGridView";
+            this.Consulta_dataGridView.ReadOnly = true;
             this.Consulta_dataGridView.Size = new System.Drawing.Size(644, 343);
             this.Consulta_dataGridView.TabIndex = 12;
+            // 
+            // Fecha_dateTimePicker
+            // 
+            this.Fecha_dateTimePicker.CalendarFont = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fecha_dateTimePicker.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fecha_dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Fecha_dateTimePicker.Location = new System.Drawing.Point(299, 36);
+            this.Fecha_dateTimePicker.Name = "Fecha_dateTimePicker";
+            this.Fecha_dateTimePicker.Size = new System.Drawing.Size(104, 22);
+            this.Fecha_dateTimePicker.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.Fecha_dateTimePicker, "Seleccione Una Fecha Exacta ");
+            this.Fecha_dateTimePicker.Visible = false;
             // 
             // cArticulos
             // 
@@ -192,5 +209,6 @@
         private System.Windows.Forms.DataGridView Consulta_dataGridView;
         private System.Windows.Forms.Button Consultar_button;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.DateTimePicker Fecha_dateTimePicker;
     }
 }
