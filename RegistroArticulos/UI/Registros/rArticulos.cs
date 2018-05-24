@@ -126,6 +126,7 @@ namespace RegistroArticulos.UI.Registros
             Precio_numericUpDown.Value = 0;
             Existencia_numericUpDown.Value = 0;
             CantCotizada_numericUpDown.Value = 0;
+            Validar_errorProvider.Clear();
 
         }
 
