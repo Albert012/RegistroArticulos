@@ -86,7 +86,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(222, 186);
+            this.label5.Location = new System.Drawing.Point(233, 185);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 19);
             this.label5.TabIndex = 4;
@@ -139,7 +139,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(-3, -6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(424, 65);
+            this.groupBox1.Size = new System.Drawing.Size(430, 65);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             // 
@@ -200,9 +200,9 @@
             // Buscar_button
             // 
             this.Buscar_button.Image = global::RegistroArticulos.Properties.Resources.find;
-            this.Buscar_button.Location = new System.Drawing.Point(273, 72);
+            this.Buscar_button.Location = new System.Drawing.Point(269, 74);
             this.Buscar_button.Name = "Buscar_button";
-            this.Buscar_button.Size = new System.Drawing.Size(39, 38);
+            this.Buscar_button.Size = new System.Drawing.Size(36, 37);
             this.Buscar_button.TabIndex = 6;
             this.toolTip1.SetToolTip(this.Buscar_button, "Buscar Articulo");
             this.Buscar_button.UseVisualStyleBackColor = true;
@@ -234,18 +234,20 @@
             this.Precio_numericUpDown.Name = "Precio_numericUpDown";
             this.Precio_numericUpDown.Size = new System.Drawing.Size(104, 20);
             this.Precio_numericUpDown.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.Precio_numericUpDown, "Max \"10000\"");
             // 
             // Existencia_numericUpDown
             // 
-            this.Existencia_numericUpDown.Location = new System.Drawing.Point(302, 185);
+            this.Existencia_numericUpDown.Location = new System.Drawing.Point(312, 185);
             this.Existencia_numericUpDown.Maximum = new decimal(new int[] {
             800,
             0,
             0,
             0});
             this.Existencia_numericUpDown.Name = "Existencia_numericUpDown";
-            this.Existencia_numericUpDown.Size = new System.Drawing.Size(99, 20);
+            this.Existencia_numericUpDown.Size = new System.Drawing.Size(90, 20);
             this.Existencia_numericUpDown.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.Existencia_numericUpDown, "Max \"800\"");
             // 
             // CantCotizada_numericUpDown
             // 
@@ -258,6 +260,7 @@
             this.CantCotizada_numericUpDown.Name = "CantCotizada_numericUpDown";
             this.CantCotizada_numericUpDown.Size = new System.Drawing.Size(104, 20);
             this.CantCotizada_numericUpDown.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.CantCotizada_numericUpDown, "Max \"300\"");
             // 
             // groupBox2
             // 
@@ -281,7 +284,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(419, 372);
+            this.ClientSize = new System.Drawing.Size(426, 372);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.CantCotizada_numericUpDown);
             this.Controls.Add(this.Existencia_numericUpDown);

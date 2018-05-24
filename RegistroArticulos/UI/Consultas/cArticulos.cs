@@ -45,6 +45,10 @@ namespace RegistroArticulos.UI.Consultas
 
         private void Filtro_comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+            /*Si seleccionamos el indice 0 se limpiar una busqueda anterior y deshabilita la busqueda
+             * por criterio, ademas buscamos automaticamente
+             */
             if (Filtro_comboBox.SelectedIndex == 0)
             {
                 Criterio_textBox.Clear();
@@ -54,7 +58,8 @@ namespace RegistroArticulos.UI.Consultas
             }
             else
                 Criterio_textBox.Enabled = true;
-
+            //el indice 3 no visualiza el text de criterio sino que visualiza un calendario para 
+            //elegir una fecha exacta
             if(Filtro_comboBox.SelectedIndex == 3)
             {
                 Criterio_textBox.Visible = false;
@@ -72,6 +77,7 @@ namespace RegistroArticulos.UI.Consultas
 
         private void Criterio_textBox_TextChanged(object sender, EventArgs e)
         {
+            //buscamos automaticamente mientras vamos digitando
             if(Criterio_textBox.Text != string.Empty)
             {
                 Consultar_button.PerformClick();

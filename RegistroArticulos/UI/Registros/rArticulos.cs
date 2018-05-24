@@ -46,6 +46,7 @@ namespace RegistroArticulos.UI.Registros
                 {
                     MessageBox.Show("Se Ha Guardado!!", "Congradulation!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Nuevo_button.PerformClick();
+                    Validar_errorProvider.Clear();
                 }
 
                 else                
@@ -60,13 +61,22 @@ namespace RegistroArticulos.UI.Registros
         {
             bool paso = true;
 
-            if(Descripcion_textBox.Text == string.Empty)
+            /*if (FechaVenc_dateTimePicker.Value == DateTime.Now && FechaVenc_dateTimePicker.Value < DateTime.Now)
+            {
+                Validar_errorProvider.SetError(FechaVenc_dateTimePicker, "Debe Seleccionar Una Fecha Mayor A La Actual");
+                paso = false;
+
+            }else*/
+
+
+            if (Descripcion_textBox.Text == string.Empty)
             {
                 Validar_errorProvider.SetError(Descripcion_textBox, "Falto Introducir La Descripcion Del Articulo");
                 paso = false;
             }
             else
-                if(Precio_numericUpDown.Value == 0)
+                          
+            if (Precio_numericUpDown.Value == 0)
             {
                 Validar_errorProvider.SetError(Precio_numericUpDown, "Falto Digital El Precio Del Articulo");
                 paso = false;
@@ -89,9 +99,11 @@ namespace RegistroArticulos.UI.Registros
                 Validar_errorProvider.SetError(CantCotizada_numericUpDown, "La Cantidad Cotizada No Debe Superar La Existencia Del Articulo");
                 paso = false;
             }
+            
             return paso;
         }
 
+        //Metodo para llenar los datos de la entidad
         private Articulos LlenaClase()
         {
             Articulos articulo = new Articulos();
