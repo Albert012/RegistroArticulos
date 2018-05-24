@@ -34,16 +34,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Consultar_button = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Criterio_textBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Filtro_comboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Consulta_dataGridView = new System.Windows.Forms.DataGridView();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Consulta_dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -53,7 +53,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(0, -8);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(623, 65);
+            this.groupBox1.Size = new System.Drawing.Size(654, 65);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             // 
@@ -80,15 +80,15 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.Consultar_button);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.Criterio_textBox);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.Filtro_comboBox);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox2.Location = new System.Drawing.Point(4, 59);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(614, 79);
+            this.groupBox2.Size = new System.Drawing.Size(643, 79);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Opciones Consulta";
@@ -102,14 +102,16 @@
             this.Consultar_button.TabIndex = 2;
             this.toolTip1.SetToolTip(this.Consultar_button, "Consultar Articulo");
             this.Consultar_button.UseVisualStyleBackColor = true;
+            this.Consultar_button.Click += new System.EventHandler(this.Consultar_button_Click);
             // 
-            // textBox1
+            // Criterio_textBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(270, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(263, 22);
-            this.textBox1.TabIndex = 1;
+            this.Criterio_textBox.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Criterio_textBox.Location = new System.Drawing.Point(270, 37);
+            this.Criterio_textBox.Name = "Criterio_textBox";
+            this.Criterio_textBox.Size = new System.Drawing.Size(263, 22);
+            this.Criterio_textBox.TabIndex = 1;
+            this.Criterio_textBox.TextChanged += new System.EventHandler(this.Criterio_textBox_TextChanged);
             // 
             // label3
             // 
@@ -120,15 +122,21 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Criterio";
             // 
-            // comboBox1
+            // Filtro_comboBox
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(68, 36);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 0;
+            this.Filtro_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Filtro_comboBox.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Filtro_comboBox.FormattingEnabled = true;
+            this.Filtro_comboBox.Items.AddRange(new object[] {
+            "",
+            "ArticuloId",
+            "Descripcion"});
+            this.Filtro_comboBox.Location = new System.Drawing.Point(68, 36);
+            this.Filtro_comboBox.Name = "Filtro_comboBox";
+            this.Filtro_comboBox.Size = new System.Drawing.Size(121, 23);
+            this.Filtro_comboBox.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.Filtro_comboBox, "Si Selecciona La Opcion En Blanco Se Estraeran Todos Los Articulos");
+            this.Filtro_comboBox.SelectedIndexChanged += new System.EventHandler(this.Filtro_comboBox_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -139,21 +147,21 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Filtro";
             // 
-            // dataGridView1
+            // Consulta_dataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 144);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(616, 343);
-            this.dataGridView1.TabIndex = 12;
+            this.Consulta_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Consulta_dataGridView.Location = new System.Drawing.Point(4, 144);
+            this.Consulta_dataGridView.Name = "Consulta_dataGridView";
+            this.Consulta_dataGridView.Size = new System.Drawing.Size(644, 343);
+            this.Consulta_dataGridView.TabIndex = 12;
             // 
             // cArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(622, 491);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(653, 491);
+            this.Controls.Add(this.Consulta_dataGridView);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -166,7 +174,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Consulta_dataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -177,11 +185,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Criterio_textBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox Filtro_comboBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView Consulta_dataGridView;
         private System.Windows.Forms.Button Consultar_button;
         private System.Windows.Forms.ToolTip toolTip1;
     }
