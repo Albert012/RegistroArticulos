@@ -31,7 +31,7 @@ namespace RegistroArticulos.BLL.Tests
         {
             bool paso;
             Articulos articulo = new Articulos();
-            articulo.ArticuloId = 1;
+            articulo.ArticuloId = 5;
             articulo.Descripcion = "Jugo Manzana 300 Ml";
             articulo.Existencia = 30;
             articulo.CantCotizada = 20;
