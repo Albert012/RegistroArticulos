@@ -61,12 +61,12 @@ namespace RegistroArticulos.UI.Registros
         {
             bool paso = true;
 
-            /*if (FechaVenc_dateTimePicker.Value == DateTime.Now && FechaVenc_dateTimePicker.Value < DateTime.Now)
+            if (FechaVenc_dateTimePicker.Value != DateTime.Now && FechaVenc_dateTimePicker.Value < DateTime.Now)
             {
                 Validar_errorProvider.SetError(FechaVenc_dateTimePicker, "Debe Seleccionar Una Fecha Mayor A La Actual");
                 paso = false;
 
-            }else*/
+            }else
 
 
             if (Descripcion_textBox.Text == string.Empty)
