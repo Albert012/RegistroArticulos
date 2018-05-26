@@ -32,7 +32,6 @@ namespace RegistroArticulos.BLL.Tests
             bool paso;
             Articulos articulo = new Articulos();
             articulo.ArticuloId = 1;
-            articulo.FechaVencimiento = Convert.ToDateTime("20-10-2020");
             articulo.Descripcion = "Jugo Manzana 300 Ml";
             articulo.Existencia = 30;
             articulo.CantCotizada = 20;
@@ -45,12 +44,7 @@ namespace RegistroArticulos.BLL.Tests
         public void EliminarTest()
         {
             bool paso;
-            Contexto contexto = new Contexto();
-
-            Articulos articulo = contexto.articulos.Find(1);
-            contexto.articulos.Remove(articulo);
-
-            paso = BLL.ArticulosBLL.Eliminar(articulo);
+            paso = BLL.ArticulosBLL.Eliminar(1);
                        
             Assert.AreEqual(paso,true);
         }
@@ -58,13 +52,18 @@ namespace RegistroArticulos.BLL.Tests
         [TestMethod()]
         public void BuscarTest()
         {
-            Assert.Fail();
+            Articulos articulo = new Articulos();
+
+            articulo = BLL.ArticulosBLL.Buscar(2);
+            Assert.AreEqual(articulo,true);
         }
 
         [TestMethod()]
         public void GetListTest()
         {
-            Assert.Fail();
+            var lista = BLL.ArticulosBLL.GetList(x => true);
+
+            Assert.IsNotNull(lista);
         }
     }
 }
