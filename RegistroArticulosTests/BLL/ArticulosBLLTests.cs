@@ -55,7 +55,7 @@ namespace RegistroArticulos.BLL.Tests
             Articulos articulo = new Articulos();
 
             articulo = BLL.ArticulosBLL.Buscar(2);
-            Assert.AreEqual(articulo,true);
+            Assert.IsNotNull(articulo);
         }
 
         [TestMethod()]
