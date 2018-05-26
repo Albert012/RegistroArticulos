@@ -44,13 +44,13 @@ namespace RegistroArticulos.BLL.Tests
         [TestMethod()]
         public void EliminarTest()
         {
-            //bool paso;
+            bool paso;
             Contexto contexto = new Contexto();
 
-            Articulos articulo = new Articulos();
-
-            articulo = contexto.articulos.Find(articulo.ArticuloId);
+            Articulos articulo = contexto.articulos.Find(1);
             contexto.articulos.Remove(articulo);
+
+            paso = BLL.ArticulosBLL.Eliminar(articulo);
                        
             Assert.AreEqual(paso,true);
         }
