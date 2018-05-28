@@ -33,19 +33,19 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.Fecha_dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.Consultar_button = new System.Windows.Forms.Button();
             this.Criterio_textBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Filtro_comboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.Fecha_dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.Consulta_dataGridView = new System.Windows.Forms.DataGridView();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.Rango_groupBox = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.Desde_dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.Hasta_dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.Rango_groupBox = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -63,7 +63,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(0, -8);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(654, 59);
+            this.groupBox1.Size = new System.Drawing.Size(707, 59);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             // 
@@ -98,22 +98,10 @@
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox2.Location = new System.Drawing.Point(4, 55);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(643, 71);
+            this.groupBox2.Size = new System.Drawing.Size(696, 71);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Opciones Consulta";
-            // 
-            // Fecha_dateTimePicker
-            // 
-            this.Fecha_dateTimePicker.CalendarFont = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Fecha_dateTimePicker.Enabled = false;
-            this.Fecha_dateTimePicker.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Fecha_dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Fecha_dateTimePicker.Location = new System.Drawing.Point(144, 16);
-            this.Fecha_dateTimePicker.Name = "Fecha_dateTimePicker";
-            this.Fecha_dateTimePicker.Size = new System.Drawing.Size(104, 22);
-            this.Fecha_dateTimePicker.TabIndex = 3;
-            this.toolTip1.SetToolTip(this.Fecha_dateTimePicker, "Seleccione Una Fecha Exacta ");
             // 
             // Consultar_button
             // 
@@ -174,14 +162,48 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Filtro";
             // 
+            // Fecha_dateTimePicker
+            // 
+            this.Fecha_dateTimePicker.CalendarFont = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fecha_dateTimePicker.Enabled = false;
+            this.Fecha_dateTimePicker.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fecha_dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Fecha_dateTimePicker.Location = new System.Drawing.Point(144, 16);
+            this.Fecha_dateTimePicker.Name = "Fecha_dateTimePicker";
+            this.Fecha_dateTimePicker.Size = new System.Drawing.Size(104, 22);
+            this.Fecha_dateTimePicker.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.Fecha_dateTimePicker, "Seleccione Una Fecha Exacta ");
+            // 
             // Consulta_dataGridView
             // 
             this.Consulta_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Consulta_dataGridView.Location = new System.Drawing.Point(4, 179);
             this.Consulta_dataGridView.Name = "Consulta_dataGridView";
             this.Consulta_dataGridView.ReadOnly = true;
-            this.Consulta_dataGridView.Size = new System.Drawing.Size(644, 343);
+            this.Consulta_dataGridView.Size = new System.Drawing.Size(696, 343);
             this.Consulta_dataGridView.TabIndex = 12;
+            // 
+            // Desde_dateTimePicker
+            // 
+            this.Desde_dateTimePicker.Enabled = false;
+            this.Desde_dateTimePicker.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Desde_dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Desde_dateTimePicker.Location = new System.Drawing.Point(67, 15);
+            this.Desde_dateTimePicker.Name = "Desde_dateTimePicker";
+            this.Desde_dateTimePicker.Size = new System.Drawing.Size(106, 22);
+            this.Desde_dateTimePicker.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.Desde_dateTimePicker, "De Que Fecha Empezara");
+            // 
+            // Hasta_dateTimePicker
+            // 
+            this.Hasta_dateTimePicker.Enabled = false;
+            this.Hasta_dateTimePicker.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Hasta_dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Hasta_dateTimePicker.Location = new System.Drawing.Point(264, 16);
+            this.Hasta_dateTimePicker.Name = "Hasta_dateTimePicker";
+            this.Hasta_dateTimePicker.Size = new System.Drawing.Size(103, 22);
+            this.Hasta_dateTimePicker.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.Hasta_dateTimePicker, "En Que Fecha Terminara");
             // 
             // Rango_groupBox
             // 
@@ -193,49 +215,27 @@
             this.Rango_groupBox.ForeColor = System.Drawing.SystemColors.Control;
             this.Rango_groupBox.Location = new System.Drawing.Point(4, 126);
             this.Rango_groupBox.Name = "Rango_groupBox";
-            this.Rango_groupBox.Size = new System.Drawing.Size(366, 47);
+            this.Rango_groupBox.Size = new System.Drawing.Size(408, 47);
             this.Rango_groupBox.TabIndex = 13;
             this.Rango_groupBox.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 17);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 19);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Desde";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(182, 19);
+            this.label5.Location = new System.Drawing.Point(211, 19);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 19);
             this.label5.TabIndex = 2;
             this.label5.Text = "Hasta";
             // 
-            // Desde_dateTimePicker
+            // label4
             // 
-            this.Desde_dateTimePicker.Enabled = false;
-            this.Desde_dateTimePicker.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Desde_dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Desde_dateTimePicker.Location = new System.Drawing.Point(58, 15);
-            this.Desde_dateTimePicker.Name = "Desde_dateTimePicker";
-            this.Desde_dateTimePicker.Size = new System.Drawing.Size(106, 22);
-            this.Desde_dateTimePicker.TabIndex = 3;
-            this.toolTip1.SetToolTip(this.Desde_dateTimePicker, "De Que Fecha Empezara");
-            // 
-            // Hasta_dateTimePicker
-            // 
-            this.Hasta_dateTimePicker.Enabled = false;
-            this.Hasta_dateTimePicker.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Hasta_dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Hasta_dateTimePicker.Location = new System.Drawing.Point(235, 16);
-            this.Hasta_dateTimePicker.Name = "Hasta_dateTimePicker";
-            this.Hasta_dateTimePicker.Size = new System.Drawing.Size(103, 22);
-            this.Hasta_dateTimePicker.TabIndex = 4;
-            this.toolTip1.SetToolTip(this.Hasta_dateTimePicker, "En Que Fecha Terminara");
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(15, 17);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 19);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Desde";
             // 
             // groupBox3
             // 
@@ -243,7 +243,7 @@
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox3.Location = new System.Drawing.Point(381, 126);
+            this.groupBox3.Location = new System.Drawing.Point(433, 126);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(267, 47);
             this.groupBox3.TabIndex = 14;
@@ -263,7 +263,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(653, 528);
+            this.ClientSize = new System.Drawing.Size(707, 528);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.Rango_groupBox);
             this.Controls.Add(this.Consulta_dataGridView);
