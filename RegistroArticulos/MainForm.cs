@@ -28,14 +28,14 @@ namespace RegistroArticulos
         {
             rArticulos articulo = new rArticulos();
             articulo.MdiParent = this.MdiParent;
-            articulo.Show();
+            articulo.ShowDialog();
         }
 
         private void articulosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             cArticulos articulo = new cArticulos();
             articulo.MdiParent = this.MdiParent;
-            articulo.Show();
+            articulo.ShowDialog();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -47,7 +47,7 @@ namespace RegistroArticulos
         {
             About about = new About();
             about.MdiParent = this.MdiParent;
-            about.Show();
+            about.ShowDialog();
         }
     }
 }
